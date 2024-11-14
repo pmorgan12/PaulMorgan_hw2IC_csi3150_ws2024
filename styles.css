@@ -1,0 +1,130 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    height: 100vh;
+    background: linear-gradient(135deg, #f3e7fd, #d9e4fd); /* Light gradient background */
+}
+
+.container {
+    text-align: center;
+    max-width: 80%;
+    padding-top: 20px;
+}
+
+h1 {
+    font-size: 24px;
+    margin: 20px auto;
+    padding: 15px 20px;
+    background-color: #e6e0fa; /* Soft lavender to match the gradient */
+    border-radius: 8px;
+    display: inline-block;
+    max-width: 90%;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    color: #333; /* Darker text for readability */
+}
+
+p {
+   font-size: 24px;
+    margin: 20px auto;
+    padding: 15px 20px;
+    background-color: #e6e0fa; /* Soft lavender to match the gradient */
+    border-radius: 8px;
+    display: inline-block;
+    max-width: 90%;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    color: #333; /* Darker text for readability */
+}
+
+
+.image-display {
+    display: flex;
+    justify-content: space-around;
+    position: fixed;
+    bottom: 100px; /* Move images slightly higher above the buttons */
+    left: 0;
+    right: 0;
+    padding: 0 20px;
+    gap: 10px;
+}
+
+.info {
+    text-align: center;
+    width: 30%;
+    visibility: hidden; /* Images are hidden initially */
+    position: relative;
+}
+
+.info.active {
+    visibility: visible; /* When active, the image container is shown */
+}
+
+.info img {
+    width: 100%;
+    height: auto;
+    margin-bottom: -10px; /* Adjust the image’s bottom margin to create even spacing */
+}
+
+.buttons {
+    display: flex;
+    justify-content: space-around;
+    position: fixed;
+    bottom: 20px;
+    left: 0;
+    right: 0;
+    /* Removed padding here to keep buttons positioned accurately without extra space */
+}
+
+button {
+    padding: 12px 20px;
+    font-size: 18px;
+    cursor: pointer;
+    background-color: #4a90e2;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    margin: 0 5px; /* Add small horizontal margin to control spacing between buttons */
+}
+
+button:hover {
+    background-color: #357ab8;
+    transform: translateY(-2px);
+    box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.15);
+}
+
+button:active {
+    transform: translateY(0px);
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.hide-button {
+    margin-top: 10px;
+    background-color: #ff4444;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 8px;
+    cursor: pointer;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.hide-button:hover {
+    background-color: #d83737;
+    transform: translateY(-2px);
+    box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.15);
+}
+
+.hide-button:active {
+    transform: translateY(0px);
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
